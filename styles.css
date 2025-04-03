@@ -72,7 +72,7 @@ header {
   text-align: center;
 }
 
-.logo-link {
+.logo-link {<img src="../images/britton.jpg" alt="Britton Watson" class="about-logo">
   display: flex;
   align-items: center;
   text-decoration: none;
