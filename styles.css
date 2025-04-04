@@ -49,7 +49,7 @@ body {
 header {
   padding: 2rem 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   position: relative;
@@ -173,6 +173,7 @@ footer {
   gap: 2.2rem;
   justify-content: center;
   margin: 1.5rem 0;
+  width: 100%;
 }
 
 .social-links a {
@@ -309,7 +310,8 @@ footer {
 /* About button styles */
 .about-button-container {
   position: absolute;
-  right: 0;
+  right: 2rem;
+  top: 2rem;
 }
 
 .about-button {
