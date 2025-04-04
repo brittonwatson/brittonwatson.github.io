@@ -57,6 +57,7 @@ header {
   align-items: center;
   width: 100%;
   position: relative;
+  min-height: 200px;
 }
 
 .logo {
@@ -64,6 +65,8 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .logo h1 {
@@ -75,6 +78,8 @@ header {
   transition: all 0.2s ease;
   text-align: center;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo-link {
@@ -179,6 +184,8 @@ footer {
   justify-content: center;
   margin: 1.5rem 0 2.5rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .social-links a {
@@ -272,6 +279,7 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   header {
+    min-height: 180px;
     padding: 2rem 0;
   }
   
@@ -294,10 +302,16 @@ footer {
   .about-logo-container {
     margin-bottom: 2.5rem;
   }
+  
+  .about-button-container {
+    right: 1rem;
+    top: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   header {
+    min-height: 160px;
     padding: 1.5rem 0;
   }
   
@@ -324,14 +338,19 @@ footer {
   .subscribe-section {
     padding: 3rem 0;
   }
+  
+  .about-button-container {
+    right: 0.8rem;
+    top: 1.5rem;
+  }
 }
 
 /* About button styles */
 .about-button-container {
   position: absolute;
   right: 1.5rem;
-  top: 1.5rem;
-  z-index: 10;
+  top: 2.5rem;
+  z-index: 2;
 }
 
 .about-button {
@@ -354,31 +373,6 @@ footer {
   color: var(--bg-color);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px var(--hover-shadow);
-}
-
-/* Add responsive adjustments for the button */
-@media (max-width: 768px) {
-  .about-button-container {
-    right: 1rem;
-    top: 1rem;
-  }
-  
-  .about-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-button-container {
-    right: 0.8rem;
-    top: 0.8rem;
-  }
-  
-  .about-button {
-    padding: 0.35rem 0.9rem;
-    font-size: 0.8rem;
-  }
 }
 
 /* Page Specific Styles */
