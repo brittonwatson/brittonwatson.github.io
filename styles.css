@@ -1,11 +1,13 @@
 :root {
-  --bg-color: #D9D9D9;
+  --bg-color: #ffffff;
   --text-color: #1A1A1A;
   --accent-color: #1A1A1A;
-  --secondary-bg: #f7f7f7;
-  --border-color: #eaeaea;
+  --secondary-bg: #fafafa;
+  --border-color: #e5e5e5;
   --hero-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.005));
   --accent-gradient: linear-gradient(90deg, #1A1A1A, #333333);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --hover-shadow: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,8 @@
     --border-color: #1d1d1d;
     --hero-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005));
     --accent-gradient: linear-gradient(90deg, #D9D9D9, #cccccc);
+    --shadow-color: rgba(255, 255, 255, 0.05);
+    --hover-shadow: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -186,12 +190,14 @@ footer {
   background-color: transparent;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: none;
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .social-links a:hover {
   transform: translateY(-1px);
   background-color: transparent;
   border-color: transparent;
+  box-shadow: 0 4px 8px var(--hover-shadow);
 }
 
 .social-links svg {
@@ -325,13 +331,14 @@ footer {
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .about-button:hover {
   background-color: var(--text-color);
   color: var(--bg-color);
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--hover-shadow);
 }
 
 /* Page Specific Styles */
@@ -516,7 +523,7 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px var(--shadow-color);
 }
 
 /* Prevent inversion in dark mode */
@@ -665,4 +672,104 @@ footer {
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+}
+
+.portrait-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  opacity: 0.9;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.portrait:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px var(--hover-shadow);
+}
+
+.subscribe-section {
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribe-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.subscribe-section p {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 250px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.subscribe-form input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(26, 26, 26, 0.1);
+}
+
+.subscribe-form button {
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.subscribe-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+/* Prevent inversion in dark mode */
+@media (prefers-color-scheme: dark) {
+  .portrait {
+    filter: none !important;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  }
+  
+  .subscribe-form input:focus {
+    box-shadow: 0 0 0 2px rgba(217, 217, 217, 0.1);
+  }
 }
