@@ -230,6 +230,7 @@ themeToggle.addEventListener('click', () => {
 // Listen for system theme changes
 prefersDarkScheme.addEventListener('change', (e) => {
     if (!localStorage.getItem('theme')) {
-        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
     }
 });
