@@ -127,7 +127,7 @@ header {
 
 .nav-link:hover {
   opacity: 1;
-  background-color: var(--secondary-bg);
+  transform: translateY(-1px);
 }
 
 .nav-link.active {
@@ -352,6 +352,24 @@ footer {
   .about-button-container {
     position: static;
     margin-top: 1rem;
+  }
+
+  .theme-toggle {
+    position: static;
+    order: 2;
+    margin-top: 0;
+    transform: none;
+  }
+
+  .nav-links {
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .theme-toggle + .nav-links {
+    margin-left: 1rem;
   }
 }
 
