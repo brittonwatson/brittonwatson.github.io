@@ -51,7 +51,7 @@ body {
 }
 
 header {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +74,7 @@ header {
   color: var(--text-color);
   transition: all 0.2s ease;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .logo-link {
@@ -97,7 +98,7 @@ main {
 }
 
 .hero {
-  padding: 5.5rem 1.5rem 4.5rem;
+  padding: 4rem 1.5rem;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -112,7 +113,7 @@ main {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 500;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.01em;
   position: relative;
 }
@@ -146,7 +147,7 @@ main {
   width: 60px;
   height: 1px;
   background: var(--accent-color);
-  margin: 0 auto;
+  margin: 0 auto 4rem;
   border-radius: 0;
   position: relative;
   animation: pulse 4s ease-in-out infinite;
@@ -176,7 +177,7 @@ footer {
   display: flex;
   gap: 2.2rem;
   justify-content: center;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2.5rem;
   width: 100%;
 }
 
@@ -217,6 +218,7 @@ footer {
   opacity: 0.5;
   letter-spacing: 0;
   font-weight: 400;
+  margin-top: 1rem;
 }
 
 /* Enhanced fade-in animation */
@@ -269,47 +271,58 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  header {
+    padding: 2rem 0;
+  }
+  
   .hero {
     padding: 3rem 1rem;
   }
   
-  .mission-statement {
-    font-size: clamp(1rem, 4vw, 1.4rem);
+  .portrait-container {
+    margin-bottom: 2.5rem;
   }
   
-  .logo {
-    margin: 0 auto;
+  .about-section {
+    padding: 3rem 1rem;
+  }
+  
+  .about-header {
+    margin-bottom: 3rem;
+  }
+  
+  .about-logo-container {
+    margin-bottom: 2.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 1.5rem 0;
+  }
+  
   .hero {
     padding: 2rem 1rem;
   }
   
-  .logo h1 {
-    font-size: 1.75rem;
+  .portrait-container {
+    margin-bottom: 2rem;
   }
   
-  .social-links {
-    gap: 1.8rem;
+  .about-section {
+    padding: 2rem 1rem;
   }
   
-  .social-links a {
-    width: 44px;
-    height: 44px;
-    background-color: transparent;
-    border: none;
+  .about-header {
+    margin-bottom: 2.5rem;
   }
   
-  .social-links svg {
-    width: 22px;
-    height: 22px;
-    fill: var(--text-color);
+  .about-logo-container {
+    margin-bottom: 2rem;
   }
   
-  .social-links a:hover svg {
-    transform: scale(1.1);
+  .subscribe-section {
+    padding: 3rem 0;
   }
 }
 
@@ -526,22 +539,18 @@ footer {
 
 /* About page styles */
 .about-section {
-  padding: 3rem 1rem;
+  padding: 4rem 1.5rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
 .about-header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .about-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .about-logo {
@@ -587,7 +596,7 @@ footer {
 }
 
 .about-content {
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem;
   max-width: 800px;
   text-align: left;
   padding: 0 1.5rem;
@@ -597,7 +606,7 @@ footer {
   font-family: 'Inter', sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.01em;
 }
 
@@ -606,7 +615,7 @@ footer {
   font-size: 1.1rem;
   line-height: 1.7;
   opacity: 0.85;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .about-content p:last-child {
@@ -621,6 +630,7 @@ footer {
 .about-bio {
   font-size: 1.1rem;
   line-height: 1.8;
+  margin-bottom: 3rem;
 }
 
 .about-bio p {
@@ -704,7 +714,7 @@ footer {
 .portrait-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .portrait {
@@ -732,14 +742,14 @@ footer {
 
 .subscribe-section h3 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--text-color);
   font-weight: 500;
   letter-spacing: -0.01em;
 }
 
 .subscribe-section p {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   color: var(--text-color);
   opacity: 0.8;
   font-weight: 300;
@@ -751,6 +761,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .subscribe-form input {
